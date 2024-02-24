@@ -61,30 +61,29 @@
 
         }
 
- class Card extends React.Component {
-    state = { s: 0 };
-    render() {
-        var img = (
-            <img
-                src="/img/0.png"
-                width="100%"
-                onClick={() => this.imgClick()}
-            />
-        );
-        if (this.state.s == 1) {
-            img = <img src={"/img/" + this.props.t + ".png"} width="100%" />;
-        }
-        if (this.state.s == 2) {
-            img = <div />;  // บัตรภาพถูกลบออก ไม่ต้องแสดงภาพ
-        }
-        return (
-            <div className="col-2">
-                {img}
-                <br />
-            </div>
-        );
-    }
-
+      class Card extends React.Component {
+            state = { s: 0 };
+            render() {
+                var img = (
+                    <img
+                        src="work1/0.png"
+                        width="100%"
+                        onClick={() => this.imgClick()}
+                    />
+                );
+                if (this.state.s == 1) {
+                    img = <img src={"work1/" + this.props.t + ".png"} width="100%" />;
+                }
+                if (this.state.s == 2) {
+                    img = <div />;  // บัตรภาพถูกลบออก ไม่ต้องแสดงภาพ
+                }
+                return (
+                    <div className="col-2">
+                        {img}
+                        <br />
+                    </div>
+                );
+            }
 
             imgClick = () => {
                 var app = this.props.app;
