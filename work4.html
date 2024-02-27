@@ -103,11 +103,11 @@
             }
 
 
-            checkCard() {
+          checkCard() {
                 var a = this.cardsOpened[0];
                 var b = this.cardsOpened[1];
                 this.cardsOpened = [];
-                if (a.props.t == b.props.t) {
+                if (a.props.t === b.props.t) {
                     a.setState({ s: 2 });
                     b.setState({ s: 2 });
                     this.setState({ cardsCount: this.state.cardsCount - 2 });
@@ -115,12 +115,11 @@
                     a.setState({ s: 0 });
                     b.setState({ s: 0 });
                 }
-                if (this.cardsCount == 0) {
-                    this.setState({ page: 2 });
+                if (this.state.cardsCount === 0) {
+                    this.setState({ scene: 2 });
                 }
             }
         }
-
 
 
 
